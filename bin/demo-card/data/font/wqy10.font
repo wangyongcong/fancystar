@@ -1,0 +1,10 @@
+{
+	"file": "data/font/wqy-microhei.ttc",
+	"size": 10.0,
+	"edt": false,
+	"hinting": true,
+	"kerning": false,
+	"outline": true,
+	"outline_thickness": 1.5,
+	"cache": " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~",
+}

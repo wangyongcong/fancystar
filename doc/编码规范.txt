@@ -1,0 +1,57 @@
+命名规范
+
+1,	C++类/函数的定义全部放到 namespace wyc
+2,	C函数命名加前缀 wyc_, 例如: wyc_function_name
+3,	函数命名使用小写字母, 单词以下划线连接: wyc::function_name
+4,	class/struct/union的命名使用小写字母, 加前缀x, 单词间以下划线连接: wyc::xclass_name
+5,	宏/枚举/常量的命名使用大写字母, 单词以下划线连接
+6,	变量命名可以使用以下2种风格: 
+		a. 全部字母小写, 单词间以下划线连接: local_variable
+		b. 第一个单词小写, 后继单词首字母大写: localVariable
+7,	全局变量要加前缀 g_
+8,	静态变量分情况添加以下3种前缀: 
+		a. 模块静态变量 s_
+		b. 类静态变量 ms_
+		c. 局部静态变量(定义于函数内部) ls_
+9,	类成员变量加前缀 m_
+10,	指针变量以p开头: pData
+11,	函数指针以pfn开头: pfnDrawFunction
+12,	#define guard:
+		a. 头文件:__HEADER_WYC_[文件名]
+		b. inline:__INLINE_WYC_[文件名]
+13, typedef
+		a. 小写字母,单词以下划线连接,以_t结尾: container_t
+		b. 函数指针以pfn_为前缀: pfn_draw_function_t
+
+=====================================================================
+
+库相关的宏定义
+
+1,	<name>:库名缩写, 大写字母
+1,	_LIB:输出LIB, 用于头文件中无相关的条件编译的简单情况
+2,	WYCLIB_<name>:输出或（对于用户来说）输入LIB, 头文件中可以有相关的条件编译
+3,	WYC_EXPORT_<name>:输出DLL
+4,	WYC_IMPORT_<name>:输入DLL
+5,	WYCAPI_<name>:DLL导出标记
+6,	静态库优先于动态库:	
+		#ifdef WYCLIB_<name>
+			#undef WYC_EXPORT_<name>
+			#undef WYC_IMPORT_<name>
+		#endif
+7,	动态链接库的导入/导出:
+		#ifdef WYC_EXPORT_<name>
+			#undef WYC_IMPORT_<name>
+			#define WYCAPI_<name> __declspec(dllexport)
+		#elif WYC_IMPORT_<name>
+			#define WYCAPI_<name> __declspec(dllimport)
+		#else
+			#define WYCAPI_<name>
+		#endif
+
+=====================================================================
+
+其他
+
+1, 全局变量, 静态变量, 类静态成员变量, 函数内的局部静态变量必须为内置类型(int, float, pointer等), 如果需要全局或静态的class变量, 则应该使用指针, 并在pthread_once()中初始化。这是因为全局和静态变量的初始化顺序不确定, 而析构顺序依赖于初始化顺序（以相反的次序执行）, 所以也无法确定。因此在全局或静态变量初始化和析构的时候, 可能会导致难以发现的BUG。
+
+2, 所有singleton()均应该返回引用, 表示绝不失败。若返回指针, 则要检查指针是否为NULL

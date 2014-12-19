@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros">
+    <PyInclude>C:\Python27\include\</PyInclude>
+    <PyLib>C:\Python27\libs\</PyLib>
+    <PyDll>C:\Python27\DLLs\</PyDll>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(PyInclude);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(PyLib);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>python27d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>COPY $(TargetPath) $(PyDll)$(TargetName).pyd</Command>
+      <Message>Copy module to python directory</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <BuildMacro Include="PyInclude">
+      <Value>$(PyInclude)</Value>
+    </BuildMacro>
+    <BuildMacro Include="PyLib">
+      <Value>$(PyLib)</Value>
+    </BuildMacro>
+    <BuildMacro Include="PyDll">
+      <Value>$(PyDll)</Value>
+    </BuildMacro>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="gb2312"?>
+<VisualStudioPropertySheet
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="static_lib"
+	>
+	<Tool
+		Name="VCCLCompilerTool"
+		EnableIntrinsicFunctions="true"
+		RuntimeLibrary="2"
+		EnableFunctionLevelLinking="true"
+	/>
+	<Tool
+		Name="VCLibrarianTool"
+		OutputFile="$(OutDir)\$(LibPrefix)$(ProjectName).lib"
+	/>
+	<Tool
+		Name="VCPostBuildEventTool"
+		CommandLine="copy /Y $(TargetPath) $(LibDir)$(TargetFileName)&#x0D;&#x0A;copy /Y $(TargetDir)$(TargetName).pdb $(LibDir)$(TargetName).pdb&#x0D;&#x0A;"
+	/>
+</VisualStudioPropertySheet>

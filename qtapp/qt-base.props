@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros">
+    <QtInclude>E:\Qt\Qt5.2.1\5.2.1\msvc2010_opengl\include</QtInclude>
+    <QtLib>E:\Qt\Qt5.2.1\5.2.1\msvc2010_opengl\lib</QtLib>
+    <QtBin>E:\Qt\Qt5.2.1\5.2.1\msvc2010_opengl\bin</QtBin>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OutDir>$(SolutionDir)out\$(ProjectName)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)out\$(ProjectName)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(QtInclude);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ProgramDataBaseFileName>$(IntDir)$(TargetName)-vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(QtLib)</AdditionalLibraryDirectories>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <PostBuildEvent>
+      <Command>if NOT EXIST $(SolutionDir)bin\$(Configuration) mkdir $(SolutionDir)bin\$(Configuration)
+xcopy /Y $(TargetPath) $(SolutionDir)bin\$(Configuration)</Command>
+      <Message>copy to bin directory</Message>
+    </PostBuildEvent>
+    <PreBuildEvent />
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <BuildMacro Include="QtInclude">
+      <Value>$(QtInclude)</Value>
+    </BuildMacro>
+    <BuildMacro Include="QtLib">
+      <Value>$(QtLib)</Value>
+    </BuildMacro>
+    <BuildMacro Include="QtBin">
+      <Value>$(QtBin)</Value>
+    </BuildMacro>
+  </ItemGroup>
+</Project>

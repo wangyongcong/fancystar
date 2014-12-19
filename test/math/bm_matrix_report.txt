@@ -1,0 +1,114 @@
+//-------------------------
+// matrix 3x3 benchmark
+//-------------------------
+[wyc matrix33]
+  round: 1000000
+  add: 0.016710
+  mul: 0.032410
+  inv: 0.040567
+[eigne matrix33]
+  round: 1000000
+  add: 0.017571
+  mul: 0.040037
+  inv: 0.049416
+[arma matrix33]
+  round: 1000000
+  add: 0.021266
+  mul: 0.103627
+  inv: 0.050305
+
+//-------------------------
+// matrix 3x3 benchmark
+//-------------------------
+[wyc matrix33]
+  round: 1000000
+  add: 0.015943
+  mul: 0.033547
+  inv: 0.039352
+[eigne matrix33]
+  round: 1000000
+  add: 0.016472
+  mul: 0.040718
+  inv: 0.048606
+[arma matrix33]
+  round: 1000000
+  add: 0.019969
+  mul: 0.102221
+  inv: 0.047847
+
+//-------------------------
+// matrix 4x4 benchmark
+//-------------------------
+[wyc matrix44]
+  round: 1000000
+  add: 0.022416
+  mul: 0.092739
+  inv: 0.400765
+[eigne matrix44]
+  round: 1000000
+  add: 0.021663
+  mul: 0.087178
+  inv: 0.167547
+[arma matrix44]
+  round: 1000000
+  add: 0.025885
+  mul: 0.187541
+  inv: 0.202228
+
+//-------------------------
+// matrix 4x4 benchmark
+//-------------------------
+[wyc matrix44]
+  round: 1000000
+  add: 0.022007
+  mul: 0.059409
+  inv: 0.263071
+[eigne matrix44]
+  round: 1000000
+  add: 0.023224
+  mul: 0.085931
+  inv: 0.166089
+[arma matrix44]
+  round: 1000000
+  add: 0.024730
+  mul: 0.188917
+  inv: 0.198007
+
+//-------------------------
+// matrix 4x4 benchmark
+//-------------------------
+[wyc matrix44]
+  round: 1000000
+  add: 0.020215
+  mul: 0.057874
+  inv: 0.264499
+[eigne matrix44]
+  round: 1000000
+  add: 0.021257
+  mul: 0.086725
+  inv: 0.167397
+[arma matrix44]
+  round: 1000000
+  add: 0.024995
+  mul: 0.188035
+  inv: 0.199870
+
+//-------------------------
+// matrix 5x5 benchmark
+//-------------------------
+[wyc matrix]
+  round: 1000000
+  add: 0.030704
+  mul: 0.172954
+  inv: 0.832669
+[eigne matrix]
+  round: 1000000
+  add: 0.033249
+  mul: 3.856981
+  inv: 12.046973
+[arma matrix]
+  round: 1000000
+  add: 0.029442
+  mul: 0.320914
+  inv: 0.000000
+

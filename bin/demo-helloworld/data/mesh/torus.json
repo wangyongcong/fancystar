@@ -1,0 +1,8 @@
+{
+	"type": "mesh",
+	"shape": "torus",
+	"radius": 0.5,
+	"fraction": 32,
+	"pipe_radius" : 0.2,
+	"pipe_fraction": 16,
+}

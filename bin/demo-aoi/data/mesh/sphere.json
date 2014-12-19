@@ -1,0 +1,6 @@
+{
+	"type": "mesh",
+	"shape": "sphere",
+	"radius": 1.0,
+	"fraction": 8,
+}

@@ -1,0 +1,7 @@
+{
+	"file": "data/font/vera.ttf",
+	"size": 10.0,
+	"hinting": true,
+	"kerning": true,
+	"cache": " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~",
+}

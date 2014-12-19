@@ -1,0 +1,7 @@
+{
+	"type": "mesh",
+	"shape": "cylinder",
+	"radius": 0.5,
+	"fraction": 32,
+	"height": 1.0,
+}

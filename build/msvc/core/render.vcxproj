@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D7EB0100-D1C9-45E9-9066-A08BDF4EE369}</ProjectGuid>
+    <RootNamespace>render</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\props\static_lib.props" />
+    <Import Project="..\props\project_base.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\props\static_lib_debug.props" />
+    <Import Project="..\props\project_base.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>11.0.60610.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\..\src\pch;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\..\src\pch;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\src\wyc\render\edtaa3func.cpp" />
+    <ClCompile Include="..\..\..\src\wyc\render\font.cpp" />
+    <ClCompile Include="..\..\..\src\wyc\render\glrenderer.cpp" />
+    <ClCompile Include="..\..\..\src\wyc\render\image.cpp" />
+    <ClCompile Include="..\..\..\src\wyc\render\renderobj.cpp" />
+    <ClCompile Include="..\..\..\src\wyc\render\text_renderer.cpp" />
+    <ClCompile Include="..\..\..\src\wyc\render\texture.cpp" />
+    <ClCompile Include="..\..\..\src\wyc\render\tilebuffer.cpp" />
+    <ClCompile Include="..\..\..\src\wyc\render\uniform_buffer.cpp" />
+    <ClCompile Include="..\..\..\src\wyc\render\vertexbatch.cpp" />
+    <ClCompile Include="..\..\..\src\freetype-gl\glyph-dict.cpp" />
+    <ClCompile Include="..\..\..\src\freetype-gl\texture-atlas.cpp" />
+    <ClCompile Include="..\..\..\src\freetype-gl\texture-font.cpp" />
+    <ClCompile Include="..\..\..\src\freetype-gl\vector.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\src\wyc\render\edtaa3func.h" />
+    <ClInclude Include="..\..\..\src\wyc\render\font.h" />
+    <ClInclude Include="..\..\..\src\wyc\render\glrenderer.h" />
+    <ClInclude Include="..\..\..\src\wyc\render\image.h" />
+    <ClInclude Include="..\..\..\src\wyc\render\renderer.h" />
+    <ClInclude Include="..\..\..\src\wyc\render\renderobj.h" />
+    <ClInclude Include="..\..\..\src\wyc\render\text_renderer.h" />
+    <ClInclude Include="..\..\..\src\wyc\render\texture.h" />
+    <ClInclude Include="..\..\..\src\wyc\render\tilebuffer.h" />
+    <ClInclude Include="..\..\..\src\wyc\render\uniform_buffer.h" />
+    <ClInclude Include="..\..\..\src\wyc\render\vertexbatch.h" />
+    <ClInclude Include="..\..\..\src\freetype-gl\freetype-gl.h" />
+    <ClInclude Include="..\..\..\src\freetype-gl\glyph-dict.h" />
+    <ClInclude Include="..\..\..\src\freetype-gl\texture-atlas.h" />
+    <ClInclude Include="..\..\..\src\freetype-gl\texture-font.h" />
+    <ClInclude Include="..\..\..\src\freetype-gl\vec234.h" />
+    <ClInclude Include="..\..\..\src\freetype-gl\vector.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

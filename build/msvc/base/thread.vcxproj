@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C40480C1-3605-42FD-B660-CC780ED0674A}</ProjectGuid>
+    <RootNamespace>thread</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\props\static_lib.props" />
+    <Import Project="..\props\project_base.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\props\static_lib_debug.props" />
+    <Import Project="..\props\project_base.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>11.0.60610.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\..\src\pch;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\..\..\src\pch;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\src\wyc\thread\async_cache.cpp" />
+    <ClCompile Include="..\..\..\src\wyc\thread\asynclist.cpp" />
+    <ClCompile Include="..\..\..\src\wyc\thread\asyncqueue.cpp" />
+    <ClCompile Include="..\..\..\src\wyc\thread\asyncstack.cpp" />
+    <ClCompile Include="..\..\..\src\wyc\thread\mpmc_list.cpp" />
+    <ClCompile Include="..\..\..\src\wyc\thread\mpsc_queue.cpp" />
+    <ClCompile Include="..\..\..\src\wyc\thread\thread.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\src\wyc\thread\asynclist.inl" />
+    <None Include="..\..\..\src\wyc\thread\thread.inl" />
+    <None Include="..\..\..\src\wyc\thread\tls.inl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\src\wyc\thread\async_cache.h" />
+    <ClInclude Include="..\..\..\src\wyc\thread\asynclist.h" />
+    <ClInclude Include="..\..\..\src\wyc\thread\asyncqueue.h" />
+    <ClInclude Include="..\..\..\src\wyc\thread\asyncstack.h" />
+    <ClInclude Include="..\..\..\src\wyc\thread\atomic.h" />
+    <ClInclude Include="..\..\..\src\wyc\thread\hazard.h" />
+    <ClInclude Include="..\..\..\src\wyc\thread\mpmc_list.h" />
+    <ClInclude Include="..\..\..\src\wyc\thread\mpsc_queue.h" />
+    <ClInclude Include="..\..\..\src\wyc\thread\spsc_queue.h" />
+    <ClInclude Include="..\..\..\src\wyc\thread\spsc_ring.h" />
+    <ClInclude Include="..\..\..\src\wyc\thread\thread.h" />
+    <ClInclude Include="..\..\..\src\wyc\thread\tls.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

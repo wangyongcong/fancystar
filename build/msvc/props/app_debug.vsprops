@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="gb2312"?>
+<VisualStudioPropertySheet
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="app_debug"
+	>
+	<Tool
+		Name="VCCLCompilerTool"
+		Optimization="0"
+		WarningLevel="3"
+		DebugInformationFormat="4"
+	/>
+	<Tool
+		Name="VCLinkerTool"
+		OutputFile="$(OutDir)\$(ProjectName)_d.exe"
+		GenerateDebugInformation="true"
+	/>
+	<Tool
+		Name="VCPostBuildEventTool"
+		CommandLine="xcopy /Y $(TargetPath) $(BinDir)"
+	/>
+</VisualStudioPropertySheet>

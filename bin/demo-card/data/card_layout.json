@@ -1,0 +1,71 @@
+{
+	"version": "1.0",
+	"width": 240,
+	"height":335,
+	"font": "font/wqy10.font",
+	"back_face":  "texture/card_back.png",
+	"front_face": "texture/card_face.png",
+	"scale": 0.01,
+	"area":
+	[
+		{
+			"name": "avatar",
+			"x": 20,
+			"y": 40,
+			"width": 200,
+			"height": 146,
+		},
+		{
+			"name": "name",
+			"x": 21,
+			"y": 19,
+			"width": 143,
+			"height": 16,
+		},
+		{
+			"name": "cost",
+			"x": 160,
+			"y": 19,
+			"width": 60,
+			"height": 16,
+		},
+		{
+			"name": "race",
+			"x": 21,
+			"y": 189,
+			"width": 173,
+			"height": 16,
+		},
+		{
+			"name": "rarity",
+			"x": 204,
+			"y": 190,
+			"width": 35,
+			"height": 24,
+		},
+		{
+			"name": "info",
+			"x": 21,
+			"y": 210,
+			"width": 197,
+			"height": 90,
+		},
+		{
+			"name": "hp",
+			"x": 183,
+			"y": 300,
+			"width": 35,
+			"height": 16,
+		},
+		{
+			"name": "strength",
+			"x": 20,
+			"y": 306,
+			"width": 65,
+			"height": 28,
+		},
+
+	]
+}
+
+

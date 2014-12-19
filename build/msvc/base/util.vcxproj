@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{9F1C4B14-F157-4315-B03A-009EA11916FB}</ProjectGuid>
+    <RootNamespace>util</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\props\static_lib.props" />
+    <Import Project="..\props\project_base.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\props\static_lib_debug.props" />
+    <Import Project="..\props\project_base.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>11.0.60610.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\src\wyc\util\base64.cpp" />
+    <ClCompile Include="..\..\..\src\wyc\util\crc32.cpp" />
+    <ClCompile Include="..\..\..\src\wyc\util\cvtutf.cpp" />
+    <ClCompile Include="..\..\..\src\wyc\util\fconfig.cpp" />
+    <ClCompile Include="..\..\..\src\wyc\util\fjson.cpp" />
+    <ClCompile Include="..\..\..\src\wyc\util\fpath.cpp" />
+    <ClCompile Include="..\..\..\src\wyc\util\hash.cpp" />
+    <ClCompile Include="..\..\..\src\wyc\util\md5.cpp" />
+    <ClCompile Include="..\..\..\src\wyc\util\sparse_array.cpp" />
+    <ClCompile Include="..\..\..\src\wyc\util\strcodec.cpp" />
+    <ClCompile Include="..\..\..\src\wyc\util\strutil.cpp" />
+    <ClCompile Include="..\..\..\src\wyc\util\task_scheduler.cpp" />
+    <ClCompile Include="..\..\..\src\wyc\util\time.cpp" />
+    <ClCompile Include="..\..\..\src\wyc\util\util.cpp" />
+    <ClCompile Include="..\..\..\src\wyc\util\var.cpp" />
+    <ClCompile Include="..\..\..\src\vjson\block_allocator.cpp" />
+    <ClCompile Include="..\..\..\src\vjson\json.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\src\wyc\util\circuque.inl" />
+    <None Include="..\..\..\src\wyc\util\hash.inl" />
+    <None Include="..\..\..\src\wyc\util\priorque.inl" />
+    <None Include="..\..\..\src\wyc\util\strutil.inl" />
+    <None Include="..\..\..\src\wyc\util\var.inl" />
+    <None Include="..\..\..\src\wyc\util\wsbucket.inl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\src\wyc\util\rect.h" />
+    <ClInclude Include="..\..\..\src\wyc\util\base64.h" />
+    <ClInclude Include="..\..\..\src\wyc\util\circuque.h" />
+    <ClInclude Include="..\..\..\src\wyc\util\cvtutf.h" />
+    <ClInclude Include="..\..\..\src\wyc\util\fconfig.h" />
+    <ClInclude Include="..\..\..\src\wyc\util\fjson.h" />
+    <ClInclude Include="..\..\..\src\wyc\util\fpath.h" />
+    <ClInclude Include="..\..\..\src\wyc\util\hash.h" />
+    <ClInclude Include="..\..\..\src\wyc\util\hash_base.h" />
+    <ClInclude Include="..\..\..\src\wyc\util\list.h" />
+    <ClInclude Include="..\..\..\src\wyc\util\md5.h" />
+    <ClInclude Include="..\..\..\src\wyc\util\priorque.h" />
+    <ClInclude Include="..\..\..\src\wyc\util\smart_pointer.h" />
+    <ClInclude Include="..\..\..\src\wyc\util\sparse_array.h" />
+    <ClInclude Include="..\..\..\src\wyc\util\strcodec.h" />
+    <ClInclude Include="..\..\..\src\wyc\util\string_dict.h" />
+    <ClInclude Include="..\..\..\src\wyc\util\strutil.h" />
+    <ClInclude Include="..\..\..\src\wyc\util\task_scheduler.h" />
+    <ClInclude Include="..\..\..\src\wyc\util\time.h" />
+    <ClInclude Include="..\..\..\src\wyc\util\util.h" />
+    <ClInclude Include="..\..\..\src\wyc\util\var.h" />
+    <ClInclude Include="..\..\..\src\wyc\util\wsbucket.h" />
+    <ClInclude Include="..\..\..\src\vjson\block_allocator.h" />
+    <ClInclude Include="..\..\..\src\vjson\json.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

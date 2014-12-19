@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="gb2312"?>
+<VisualStudioPropertySheet
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="project_base"
+	OutputDirectory="$(SolutionDir)out\$(ProjectName)\$(ConfigurationName)"
+	IntermediateDirectory="$(SolutionDir)out\$(ProjectName)\$(ConfigurationName)"
+	>
+	<Tool
+		Name="VCCLCompilerTool"
+		AdditionalIncludeDirectories="..\..\..\sdk\include;..\..\..\src"
+		PreprocessorDefinitions="WYC_LOG2FILE;WYC_MEMDEBUG"
+		ProgramDataBaseFileName="$(IntDir)\$(TargetName).pdb"
+	/>
+	<Tool
+		Name="VCLinkerTool"
+		AdditionalLibraryDirectories="..\..\..\sdk\lib"
+	/>
+	<UserMacro
+		Name="LibPrefix"
+		Value="fs"
+	/>
+	<UserMacro
+		Name="LibDir"
+		Value="$(SolutionDir)..\..\sdk\lib\"
+	/>
+	<UserMacro
+		Name="BinDir"
+		Value="$(SolutionDir)..\..\bin\$(ProjectName)\"
+	/>
+	<UserMacro
+		Name="PyInclude"
+		Value="E:\Python25\include\"
+	/>
+	<UserMacro
+		Name="PyLib"
+		Value="E:\Python25\libs\"
+	/>
+	<UserMacro
+		Name="PyDll"
+		Value="E:\Python25\DLLs\"
+	/>
+</VisualStudioPropertySheet>

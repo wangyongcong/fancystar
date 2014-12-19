@@ -1,0 +1,19 @@
+help
+{
+	help1: Press F1 for help
+	help2: Press F2 to open console
+}
+
+warning
+{
+	warning1: 警告[1]：兼容性
+	warning2: 警告[2]：线程安全
+}
+
+error
+{
+	error1: 错误[1]：无效指针
+	error2: 错误[2]：资源泄漏
+}
+
+

@@ -1,0 +1,35 @@
+{
+	"image_file": "data/texture/card_avatar.png",
+	"image_count": 4,
+	"images":
+	[
+		{
+			"name": "angel",
+			"xpos": 0,
+			"ypos": 0,
+			"width": 200,
+			"height":146,
+		},
+		{
+			"name": "vagrant",
+			"xpos": 210,
+			"ypos": 0,
+			"width": 200,
+			"height":146,
+		},
+		{
+			"name": "earthworm",
+			"xpos": 0,
+			"ypos": 150,
+			"width": 200,
+			"height":146,
+		},
+		{
+			"name": "giant",
+			"xpos": 210,
+			"ypos": 150,
+			"width": 200,
+			"height":146,
+		},
+	],
+}

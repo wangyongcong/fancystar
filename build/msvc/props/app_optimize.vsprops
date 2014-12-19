@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="gb2312"?>
+<VisualStudioPropertySheet
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="app_optimize"
+	>
+	<Tool
+		Name="VCCLCompilerTool"
+		EnableIntrinsicFunctions="true"
+		RuntimeLibrary="2"
+		EnableFunctionLevelLinking="true"
+	/>
+	<Tool
+		Name="VCLinkerTool"
+		OptimizeReferences="2"
+		EnableCOMDATFolding="2"
+	/>
+	<Tool
+		Name="VCPostBuildEventTool"
+		CommandLine="xcopy /Y $(TargetPath) $(BinDir)"
+	/>
+</VisualStudioPropertySheet>

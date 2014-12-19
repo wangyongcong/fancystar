@@ -1,0 +1,14 @@
+创建Doxyfile的副本，改名为project_name.doxygen，然后依次修改以下参数:
+
+注意：参数的值中有空格的话，要用英文双引号括起来
+
+1，PROJECT_NAME: 文档名称
+2，PROJECT_NUMBER：版本号
+3，OUTPUT_DIRECTORY：文档输出目录
+4，INPUT：源代码目录，多个目录用空格分隔
+5，INPUT_ENCODING：源代码文件的编码格式（VC默认为GB2312）
+6，FILE_PATTERNS：需要处理的源代码文件格式
+7，EXCLUDE_PATTERNS：需要排除在外的目录，多个目录用空格分隔
+
+
+
